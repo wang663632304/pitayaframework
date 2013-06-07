@@ -34,18 +34,14 @@ AndroidSupport
 		}).setOnTaskRequestListener(new OnTaskRequestListener() {
 			Group<Product> products;
 			@Override
-			public void onRequest() throws Exception{
+			public Result onRequest() throws Exception{
 				//耗时的在这做
 			}
-			
-			@Override
-			public Result getResult() {
-				//返回你的对象
-			}
+
 		}).setOnInvokeAfterListener(new OnInvokeAterListener() {
 			
 			@Override
-			public void onInvokeAter(MsgResult result) {
+			public void onInvokeAter(TaskResult result) {
 					//结束后更新UI等
 			}
 		})setOnInvokeErrorListener(new OnInvokeErrorListener(){
